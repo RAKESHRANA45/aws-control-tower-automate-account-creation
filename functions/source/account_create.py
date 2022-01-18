@@ -234,7 +234,7 @@ def generate_provisioned_product_name(data):
 
     for i in data:
         if i['Key'] == 'AccountName':
-            result = 'AccountLaunch-'+i['Value']
+            result = 'AccountLaunch-'+str(int(time.time()))+'-'+i['Value']
 
     return result
 
